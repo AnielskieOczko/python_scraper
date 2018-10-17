@@ -3,7 +3,7 @@ Simple website crawler + data scraping
 
 Content:
 1) open_page.py: main module, contain following functions:
-  - download
+  - get_page
 Download a given URL and return the page content
         args:
             url (str): URL
@@ -12,9 +12,9 @@ Download a given URL and return the page content
             charset (str): charset if website does not include one in headers
             proxy (str): proxy url, ex 'http://IP' (default: None)
             num_retries (int): number of retries if a 5xx error is seen (default: 2)
-  - get_robots_parser: get robots.txt of webpage
-  - get_links: pull all lings from web_site
-  - link_crawler: Crawl from the given start URL following links matched by link_regex. 
+  - robots_parser: get robots.txt of webpage
+  - link_finder: pull all lings from web_site
+  - link_checker: Crawl from the given start URL following links matched by link_regex. 
         In the current
         implementation, we do not actually scrapy any information.
         args:
